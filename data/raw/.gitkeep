@@ -1,0 +1,6 @@
+This folder holds untouched downloads from the original real data sources:
+- apache_jira_raw.csv (from 01_extract_apache_jira.py)
+- pcaob_deficiencies_raw.csv (manually downloaded from pcaobus.org)
+- sec_edgar_disclosures_raw.json (from 02_extract_pcaob_sec_edgar.py)
+
+Files are not committed here until you run the extraction scripts.

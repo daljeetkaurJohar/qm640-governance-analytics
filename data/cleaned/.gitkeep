@@ -1,0 +1,3 @@
+This folder holds analysis-ready datasets produced by 03_data_cleaning.py:
+- qa_defect_dataset.csv (matches Table 1 in docs/data_dictionary.md)
+- audit_disclosure_dataset.csv (matches Table 2 in docs/data_dictionary.md)
