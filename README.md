@@ -1,62 +1,59 @@
-# QM640 Data Analytics Capstone: Governance Risk Analytics
+# QM640 Governance Analytics — Data-Driven Quality and Risk Analytics
 
-**Author:** Daljeet Kaur Johar | Walsh College | QM640 Data Analytics Capstone
-
-## Overview
-This repository contains the data, code, and analysis for a capstone study examining
-whether established governance analytics practices — software defect prediction and
-IT-audit risk modeling — hold under two real, current conditions: the generative-AI
-coding era, and the PCAOB's newly released (April 2025) machine-readable inspection
-data. The study concludes with a fifth, cross-domain question comparing the magnitude
-of change found in both domains.
-
-## Data Sources (all real, publicly available — no synthetic or Kaggle data)
-- **Apache Software Foundation JIRA** (https://issues.apache.org/jira) — real, resolved software issues
-- **NASA/PROMISE Software Defect Prediction Repository** — cross-validation reference
-- **PCAOB Inspection Datasets** (https://pcaobus.org/oversight/inspections/firm-inspection-reports) — real audit deficiency records, 2018–present
-- **SEC EDGAR Full-Text Search** (https://www.sec.gov/edgar/search/) — real material weakness disclosures, 2020+
+Capstone project comparing governance-relevant change in the software QA/defect domain (AI-coding era) and the IT audit/disclosure domain (PCAOB inspection data), for QM640 at Walsh College.
 
 ## Repository Structure
+
 ```
 qm640-governance-analytics/
 ├── data/
-│   ├── raw/                                  # untouched downloads from original sources
-│   └── cleaned/                               # processed, analysis-ready datasets
+│   ├── raw/nasa_promise_combined_raw.csv      # 12,655 rows, 8 NASA/PROMISE projects, as-loaded
+│   └── clean/nasa_promise_combined_clean.csv  # 12,639 rows, post dedup + median imputation
 ├── notebooks/
-│   ├── 01_extract_apache_jira.py             # pulls real JIRA issue data via REST API
-│   ├── 02_extract_pcaob_sec_edgar.py         # pulls real PCAOB + SEC EDGAR data
-│   ├── 03_data_cleaning.py                   # cleans/merges raw -> cleaned datasets
-│   ├── 04_rq1_rq2_era_analysis.py            # moderated regression: pre/post AI-coding era
-│   ├── 05_rq3_pcaob_severity_model.py        # classification: Part I.A vs I.B
-│   ├── 06_rq4_remediation_time_model.py      # regression/survival: remediation time
-│   └── 07_rq5_cross_domain_synthesis.py      # compares effect sizes across domains
-├── docs/
-│   ├── synopsis.pdf                          # full capstone synopsis
-│   └── data_dictionary.md                    # field-by-field dictionary (Tables 1-2)
-└── README.md
+│   ├── 1_data_loading.py                      # Loads 8 ARFF files, combines, saves raw CSV
+│   ├── 2_cleaning_eda_modeling.py             # Cleaning, EDA, LogReg/RF baseline models, figures
+│   └── 3_statistical_significance_testing.py  # McNemar's test, bootstrap 95% CIs
+├── figures/                                    # fig0 (pipeline) through fig5 (feature importance)
+├── reports/Daljeet_Kaur_Johar_QM640_Interim_Report.docx
+└── synopsis/Daljeet_Kaur_Johar_QM640_Synopsis.docx
 ```
 
-## Reproducing This Study
-1. Clone this repository: `git clone https://github.com/[username]/qm640-governance-analytics.git`
-2. Install dependencies: `pip install requests pandas numpy scikit-learn scipy lifelines statsmodels`
-3. Run notebooks in `/notebooks` in numbered order (01 → 07)
-4. Raw data is pulled live from the sources listed above — see each script's docstring for API details
+## Data Provenance
 
-## Research Questions
-See `docs/synopsis.pdf` for the full synopsis, including all 5 research questions,
-hypotheses, sample size calculations, and analytic approach. Summary:
+**QA/defect domain (this interim stage):** 8 real, peer-reviewed NASA/PROMISE software defect
+datasets (CM1, JM1, KC1, KC3, MW1, PC1, PC3, PC4), originally released by Shepperd, Song, Sun,
+and Mair (2014), mirrored for research reuse at
+[github.com/klainfo/NASADefectDataset](https://github.com/klainfo/NASADefectDataset).
 
-- **RQ1/RQ2** (Apache JIRA + NASA-PROMISE): Has the relationship between code/process
-  metrics and defect-proneness/resolution-time changed between the pre-AI-coding era
-  (before 2023-01-01) and the AI-assisted-coding era (2023-01-01 onward)?
-- **RQ3** (PCAOB): Can ML classify deficiency severity (Part I.A vs I.B) using PCAOB's
-  newly released machine-readable datasets?
-- **RQ4** (SEC EDGAR): Do modern ML models identify different remediation-time drivers
-  than pre-2018 traditional-statistics research (Mojtahedi & Zhou, 2024)?
-- **RQ5**: Is the magnitude of change in RQ1/RQ2 comparable to the magnitude of change
-  in RQ4, suggesting a shared "digital-era governance disruption" across both domains?
+**Not yet included (planned for final report):**
+- Apache JIRA issue data (timestamped, for the pre-AI vs. AI-coding era comparison in RQ1/RQ2)
+- PCAOB Part I.A / Part I.B inspection datasets (RQ3)
+- SEC EDGAR material-weakness filings, 2020+ (RQ4)
 
-## License
-Code in this repository is released under the MIT License. Data usage follows each
-original source's own public-data terms (Apache Software Foundation, NASA/PROMISE,
-PCAOB, and U.S. SEC EDGAR).
+These three sources were identified (real download endpoints located) but could not be pulled
+into the sandboxed analysis environment used to prepare the interim report. See the Interim
+Report's "Limitations and Risks" and "Next Steps" sections for details.
+
+## Reproducing the Analysis
+
+```bash
+pip install -r requirements.txt
+python notebooks/1_data_loading.py            # requires the 8 .arff files (see note below)
+python notebooks/2_cleaning_eda_modeling.py
+python notebooks/3_statistical_significance_testing.py
+```
+
+Note: `1_data_loading.py` expects the 8 `.arff` files from the NASADefectDataset repo's
+`CleanedData/MDP/D''/` folder to be present locally (clone that repo, or download the individual
+files). `data/raw/` and `data/clean/` in this repo already contain the output of that step, so
+you can skip straight to script 2 if you just want to reproduce the EDA/modeling/statistics.
+
+## Key Preliminary Results (Interim, QA/Defect Domain)
+
+| Model | Test AUC | Test Accuracy | Test F1 |
+|---|---|---|---|
+| Logistic Regression | 0.719 | 0.717 | 0.429 |
+| Random Forest | 0.731 | 0.752 | 0.427 |
+
+McNemar's test (LogReg vs. RF): χ² = 26.28, p < .0001 — significant per-module disagreement.
+Bootstrap 95% CI on AUC difference (RF − LogReg): [-0.002, 0.027] — includes zero.
