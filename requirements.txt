@@ -5,3 +5,8 @@ matplotlib
 scipy
 statsmodels
 liac-arff
+lizard
+lifelines
+jupyter
+notebook
+requests

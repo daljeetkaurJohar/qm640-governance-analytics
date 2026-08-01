@@ -7,53 +7,75 @@ Capstone project comparing governance-relevant change in the software QA/defect 
 ```
 qm640-governance-analytics/
 ├── data/
-│   ├── raw/nasa_promise_combined_raw.csv      # 12,655 rows, 8 NASA/PROMISE projects, as-loaded
-│   └── clean/nasa_promise_combined_clean.csv  # 12,639 rows, post dedup + median imputation
-├── notebooks/
-│   ├── 1_data_loading.py                      # Loads 8 ARFF files, combines, saves raw CSV
-│   ├── 2_cleaning_eda_modeling.py             # Cleaning, EDA, LogReg/RF baseline models, figures
-│   └── 3_statistical_significance_testing.py  # McNemar's test, bootstrap 95% CIs
-├── figures/                                    # fig0 (pipeline) through fig5 (feature importance)
+│   ├── raw/
+│   │   ├── apache_jira_raw.csv                  # 30,733 real JIRA issues (Camel + Hadoop)
+│   │   ├── pcaob_deficiencies_raw.csv           # 16,704 real PCAOB deficiency records
+│   │   ├── nasa_promise_arff/                   # 13 real source ARFF files (8 used)
+│   │   └── nasa_promise_combined_raw.csv        # 12,655 rows, NASA/PROMISE substitute
+│   └── cleaned/
+│       ├── qa_defect_dataset.csv                # Real JIRA data, era + resolution_time_days added
+│       ├── audit_disclosure_dataset.csv         # Real PCAOB data, leaked fields removed
+│       ├── nasa_promise_combined_clean.csv      # 12,639 rows, post dedup + imputation
+│       └── rq1_real_mined_dataset.csv           # 1,804 real mined code-metric samples
+├── notebooks/                                    # numbered in pipeline order, all executed
+│   ├── 01_extract_apache_jira.ipynb              # Real JIRA extraction (documented)
+│   ├── 02_extract_pcaob_sec_edgar.ipynb          # PCAOB done; SEC EDGAR still pending
+│   ├── 03_data_cleaning.ipynb                    # Cleans both datasets; removes leaked PCAOB fields
+│   ├── 04_nasa_promise_data_loading.ipynb        # Loads 8 real NASA/PROMISE ARFF files
+│   ├── 05_nasa_promise_cleaning_eda_baseline_model.ipynb  # EDA + LogReg/RF baseline (5 figures inline)
+│   ├── 06_nasa_promise_statistical_testing.ipynb # McNemar's test, bootstrap 95% CIs
+│   ├── 07_rq1_code_metric_mining_analysis.ipynb  # REAL RQ1: mined Camel/Hadoop code metrics
+│   ├── 08_rq2_era_analysis.ipynb                 # REAL RQ2: era-moderated regression, real JIRA data
+│   ├── 09_rq3_pcaob_severity_model.ipynb         # REAL RQ3: PCAOB severity, leakage-corrected
+│   ├── 10_rq4_remediation_time_model.ipynb       # SCAFFOLD ONLY -- needs SEC EDGAR data
+│   └── 11_rq5_cross_domain_synthesis.ipynb       # SCAFFOLD ONLY -- needs RQ4's real result
+├── figures/                                      # fig0 (pipeline) through fig8 (RQ1 mining)
 ├── reports/Daljeet_Kaur_Johar_QM640_Interim_Report.docx
 └── synopsis/Daljeet_Kaur_Johar_QM640_Synopsis.docx
 ```
 
-## Data Provenance
+All 9 runnable notebooks (01-09) were actually executed -- every cell's real output,
+including figures, is already saved inside the `.ipynb` files. Notebooks 10 and 11
+are honestly marked as not-yet-runnable scaffolds (they print their own status
+message explaining exactly what's missing, rather than erroring silently).
 
-**QA/defect domain (this interim stage):** 8 real, peer-reviewed NASA/PROMISE software defect
-datasets (CM1, JM1, KC1, KC3, MW1, PC1, PC3, PC4), originally released by Shepperd, Song, Sun,
-and Mair (2014), mirrored for research reuse at
-[github.com/klainfo/NASADefectDataset](https://github.com/klainfo/NASADefectDataset).
+## What's Real vs. What's Still a Substitute or Pending
 
-**Not yet included (planned for final report):**
-- Apache JIRA issue data (timestamped, for the pre-AI vs. AI-coding era comparison in RQ1/RQ2)
-- PCAOB Part I.A / Part I.B inspection datasets (RQ3)
-- SEC EDGAR material-weakness filings, 2020+ (RQ4)
+| Research Question | Status | Data Source |
+|---|---|---|
+| RQ1 (defect-proneness x era) | **Real** | Mined Camel/Hadoop code metrics (1,804 samples) |
+| RQ2 (resolution time x era) | **Real** | Real Apache JIRA data (30,733 issues) |
+| RQ3 (PCAOB severity) | **Real** | Real PCAOB data (16,704 records), leakage caught & fixed |
+| RQ4 (remediation time) | **Pending** | Needs real SEC EDGAR extraction (not yet run) |
+| RQ5 (cross-domain synthesis) | **Pending** | Needs RQ4's real result first |
 
-These three sources were identified (real download endpoints located) but could not be pulled
-into the sandboxed analysis environment used to prepare the interim report. See the Interim
-Report's "Limitations and Risks" and "Next Steps" sections for details.
+The NASA/PROMISE dataset (notebooks 04-06) was the original interim-stage substitute
+for RQ1 before the real code-metric mining pipeline (notebook 07) was built; it now
+serves as a cross-validation reference rather than RQ1's primary evidence.
+
+**Known labeling caveat (RQ1):** `defect_prone = 1` in the mined dataset means
+"commit linked to a tracked, resolved JIRA issue," not a strict "confirmed bug"
+label, since the JIRA extraction did not capture the issue-type field. See the
+report's Limitations section for full detail.
 
 ## Reproducing the Analysis
 
 ```bash
 pip install -r requirements.txt
-python notebooks/1_data_loading.py            # requires the 8 .arff files (see note below)
-python notebooks/2_cleaning_eda_modeling.py
-python notebooks/3_statistical_significance_testing.py
+jupyter notebook
+# Run in order: 01 -> 02 (PCAOB half only; SEC EDGAR half is commented out) -> 03 ->
+# 04 -> 05 -> 06 -> 07 -> 08 -> 09
+# Notebook 07 will clone the real apache/camel and apache/hadoop repos on first run
+# (large, full commit history) if they aren't already present under ../repos/.
 ```
 
-Note: `1_data_loading.py` expects the 8 `.arff` files from the NASADefectDataset repo's
-`CleanedData/MDP/D''/` folder to be present locally (clone that repo, or download the individual
-files). `data/raw/` and `data/clean/` in this repo already contain the output of that step, so
-you can skip straight to script 2 if you just want to reproduce the EDA/modeling/statistics.
+## Key Real Results (Summary)
 
-## Key Preliminary Results (Interim, QA/Defect Domain)
-
-| Model | Test AUC | Test Accuracy | Test F1 |
+| Domain | Model | Test AUC | Test Accuracy |
 |---|---|---|---|
-| Logistic Regression | 0.719 | 0.717 | 0.429 |
-| Random Forest | 0.731 | 0.752 | 0.427 |
+| RQ1 (code-metric mining) | Random Forest | 0.730 | 0.734 |
+| RQ2 (JIRA era regression) | OLS (era interactions) | -- | Cohen's f-squared = 0.0011 (negligible) |
+| RQ3 (PCAOB severity) | Random Forest | 0.986 | 0.971 |
+| NASA/PROMISE baseline | Random Forest | 0.731 | 0.752 |
 
-McNemar's test (LogReg vs. RF): χ² = 26.28, p < .0001 — significant per-module disagreement.
-Bootstrap 95% CI on AUC difference (RF − LogReg): [-0.002, 0.027] — includes zero.
+McNemar's test (NASA/PROMISE LogReg vs. RF): chi-square = 26.28, p < .0001.
