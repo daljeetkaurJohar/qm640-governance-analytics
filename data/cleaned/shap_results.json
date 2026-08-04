@@ -1,0 +1,15 @@
+{
+  "n_shap_samples": 150,
+  "top_10_shap_features": {
+    "cat__standard_cited_AS 2301": 0.08207019596508529,
+    "cat__standard_cited_AS 2201": 0.06623491556814592,
+    "cat__inspection_type_Annually Inspected": 0.04199383614809542,
+    "cat__standard_cited_AS 1301": 0.041024840538820245,
+    "cat__inspection_type_Triennially Inspected": 0.03992350091948748,
+    "cat__standard_cited_AS 3101": 0.03301153449703499,
+    "cat__standard_cited_AS 1105": 0.029998490997147596,
+    "cat__standard_cited_PCAOB Rule 3211": 0.026790762037316885,
+    "cat__standard_cited_AS 2315": 0.022503053378073856,
+    "cat__standard_cited_AS 2501": 0.020032782336187768
+  }
+}
