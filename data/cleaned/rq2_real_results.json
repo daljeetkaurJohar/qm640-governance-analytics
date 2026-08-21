@@ -1,0 +1,46 @@
+{
+  "n_total": 30733,
+  "n_pre_ai": 25327,
+  "n_ai_era": 5406,
+  "full_r2": 0.030194067904357857,
+  "reduced_r2": 0.0291321904404106,
+  "f2": 0.0010949380992676132,
+  "significant_interactions": [
+    "C(priority)[T.Critical]:era_binary",
+    "C(priority)[T.Major]:era_binary",
+    "C(priority)[T.Minor]:era_binary",
+    "C(priority)[T.Trivial]:era_binary"
+  ],
+  "coefficients": {
+    "Intercept": -23.386491211980303,
+    "C(priority)[T.Critical]": 28.51917909231897,
+    "C(priority)[T.Major]": 65.13959399184142,
+    "C(priority)[T.Minor]": 71.37949505873318,
+    "C(priority)[T.Trivial]": 59.78424733370196,
+    "num_comments": 4.1794443117788145,
+    "era_binary": 262.22710181646295,
+    "C(priority)[T.Critical]:era_binary": -258.6862385815145,
+    "C(priority)[T.Major]:era_binary": -255.12290813168042,
+    "C(priority)[T.Minor]:era_binary": -241.0185419770714,
+    "C(priority)[T.Trivial]:era_binary": -307.20776019061725,
+    "num_comments:era_binary": -0.4455374252531526
+  },
+  "pvalues": {
+    "Intercept": 0.00490423951766888,
+    "C(priority)[T.Critical]": 0.044275340106711435,
+    "C(priority)[T.Major]": 5.681379419892312e-15,
+    "C(priority)[T.Minor]": 2.2739656334140874e-16,
+    "C(priority)[T.Trivial]": 9.307352389807841e-07,
+    "num_comments": 4.56110504577983e-162,
+    "era_binary": 3.644307884451331e-08,
+    "C(priority)[T.Critical]:era_binary": 7.254024715052447e-05,
+    "C(priority)[T.Major]:era_binary": 8.966122461794001e-08,
+    "C(priority)[T.Minor]:era_binary": 5.029241050417438e-07,
+    "C(priority)[T.Trivial]:era_binary": 8.460150635592567e-06,
+    "num_comments:era_binary": 0.17441291229237188
+  },
+  "median_resolution_pre_ai": 3.0,
+  "median_resolution_ai_era": 2.0,
+  "mean_resolution_pre_ai": 69.70336005053895,
+  "mean_resolution_ai_era": 73.0536440991491
+}

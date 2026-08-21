@@ -1,62 +1,81 @@
-# QM640 Data Analytics Capstone: Governance Risk Analytics
+# QM640 Governance Analytics — Data-Driven Quality and Risk Analytics
 
-**Author:** Daljeet Kaur Johar | Walsh College | QM640 Data Analytics Capstone
-
-## Overview
-This repository contains the data, code, and analysis for a capstone study examining
-whether established governance analytics practices — software defect prediction and
-IT-audit risk modeling — hold under two real, current conditions: the generative-AI
-coding era, and the PCAOB's newly released (April 2025) machine-readable inspection
-data. The study concludes with a fifth, cross-domain question comparing the magnitude
-of change found in both domains.
-
-## Data Sources (all real, publicly available — no synthetic or Kaggle data)
-- **Apache Software Foundation JIRA** (https://issues.apache.org/jira) — real, resolved software issues
-- **NASA/PROMISE Software Defect Prediction Repository** — cross-validation reference
-- **PCAOB Inspection Datasets** (https://pcaobus.org/oversight/inspections/firm-inspection-reports) — real audit deficiency records, 2018–present
-- **SEC EDGAR Full-Text Search** (https://www.sec.gov/edgar/search/) — real material weakness disclosures, 2020+
+Capstone project comparing governance-relevant change in the software QA/defect domain (AI-coding era) and the IT audit/disclosure domain (PCAOB inspection data), for QM640 at Walsh College.
 
 ## Repository Structure
+
 ```
 qm640-governance-analytics/
 ├── data/
-│   ├── raw/                                  # untouched downloads from original sources
-│   └── cleaned/                               # processed, analysis-ready datasets
-├── notebooks/
-│   ├── 01_extract_apache_jira.py             # pulls real JIRA issue data via REST API
-│   ├── 02_extract_pcaob_sec_edgar.py         # pulls real PCAOB + SEC EDGAR data
-│   ├── 03_data_cleaning.py                   # cleans/merges raw -> cleaned datasets
-│   ├── 04_rq1_rq2_era_analysis.py            # moderated regression: pre/post AI-coding era
-│   ├── 05_rq3_pcaob_severity_model.py        # classification: Part I.A vs I.B
-│   ├── 06_rq4_remediation_time_model.py      # regression/survival: remediation time
-│   └── 07_rq5_cross_domain_synthesis.py      # compares effect sizes across domains
-├── docs/
-│   ├── synopsis.pdf                          # full capstone synopsis
-│   └── data_dictionary.md                    # field-by-field dictionary (Tables 1-2)
-└── README.md
+│   ├── raw/
+│   │   ├── apache_jira_raw.csv                  # 30,733 real JIRA issues (Camel + Hadoop)
+│   │   ├── pcaob_deficiencies_raw.csv           # 16,704 real PCAOB deficiency records
+│   │   ├── nasa_promise_arff/                   # 13 real source ARFF files (8 used)
+│   │   └── nasa_promise_combined_raw.csv        # 12,655 rows, NASA/PROMISE substitute
+│   └── cleaned/
+│       ├── qa_defect_dataset.csv                # Real JIRA data, era + resolution_time_days added
+│       ├── audit_disclosure_dataset.csv         # Real PCAOB data, leaked fields removed
+│       ├── nasa_promise_combined_clean.csv      # 12,639 rows, post dedup + imputation
+│       └── rq1_real_mined_dataset.csv           # 1,804 real mined code-metric samples
+├── notebooks/                                    # numbered in pipeline order, all executed
+│   ├── 01_extract_apache_jira.ipynb              # Real JIRA extraction (documented)
+│   ├── 02_extract_pcaob_sec_edgar.ipynb          # PCAOB done; SEC EDGAR still pending
+│   ├── 03_data_cleaning.ipynb                    # Cleans both datasets; removes leaked PCAOB fields
+│   ├── 04_nasa_promise_data_loading.ipynb        # Loads 8 real NASA/PROMISE ARFF files
+│   ├── 05_nasa_promise_cleaning_eda_baseline_model.ipynb  # EDA + LogReg/RF baseline (5 figures inline)
+│   ├── 06_nasa_promise_statistical_testing.ipynb # McNemar's test, bootstrap 95% CIs
+│   ├── 07_rq1_code_metric_mining_analysis.ipynb  # REAL RQ1: mined Camel/Hadoop code metrics
+│   ├── 08_rq2_era_analysis.ipynb                 # REAL RQ2: era-moderated regression, real JIRA data
+│   ├── 09_rq3_pcaob_severity_model.ipynb         # REAL RQ3: PCAOB severity, leakage-corrected
+│   ├── 10_rq4_remediation_time_model.ipynb       # SCAFFOLD ONLY -- needs SEC EDGAR data
+│   └── 11_rq5_cross_domain_synthesis.ipynb       # SCAFFOLD ONLY -- needs RQ4's real result
+├── figures/                                      # fig0 (pipeline) through fig8 (RQ1 mining)
+├── reports/Daljeet_Kaur_Johar_QM640_Interim_Report.docx
+└── synopsis/Daljeet_Kaur_Johar_QM640_Synopsis.docx
 ```
 
-## Reproducing This Study
-1. Clone this repository: `git clone https://github.com/[username]/qm640-governance-analytics.git`
-2. Install dependencies: `pip install requests pandas numpy scikit-learn scipy lifelines statsmodels`
-3. Run notebooks in `/notebooks` in numbered order (01 → 07)
-4. Raw data is pulled live from the sources listed above — see each script's docstring for API details
+All 9 runnable notebooks (01-09) were actually executed -- every cell's real output,
+including figures, is already saved inside the `.ipynb` files. Notebooks 10 and 11
+are honestly marked as not-yet-runnable scaffolds (they print their own status
+message explaining exactly what's missing, rather than erroring silently).
 
-## Research Questions
-See `docs/synopsis.pdf` for the full synopsis, including all 5 research questions,
-hypotheses, sample size calculations, and analytic approach. Summary:
+## What's Real vs. What's Still a Substitute or Pending
 
-- **RQ1/RQ2** (Apache JIRA + NASA-PROMISE): Has the relationship between code/process
-  metrics and defect-proneness/resolution-time changed between the pre-AI-coding era
-  (before 2023-01-01) and the AI-assisted-coding era (2023-01-01 onward)?
-- **RQ3** (PCAOB): Can ML classify deficiency severity (Part I.A vs I.B) using PCAOB's
-  newly released machine-readable datasets?
-- **RQ4** (SEC EDGAR): Do modern ML models identify different remediation-time drivers
-  than pre-2018 traditional-statistics research (Mojtahedi & Zhou, 2024)?
-- **RQ5**: Is the magnitude of change in RQ1/RQ2 comparable to the magnitude of change
-  in RQ4, suggesting a shared "digital-era governance disruption" across both domains?
+| Research Question | Status | Data Source |
+|---|---|---|
+| RQ1 (defect-proneness x era) | **Real** | Mined Camel/Hadoop code metrics (1,804 samples) |
+| RQ2 (resolution time x era) | **Real** | Real Apache JIRA data (30,733 issues) |
+| RQ3 (PCAOB severity) | **Real** | Real PCAOB data (16,704 records), leakage caught & fixed |
+| RQ4 (remediation time) | **Pending** | Needs real SEC EDGAR extraction (not yet run) |
+| RQ5 (cross-domain synthesis) | **Pending** | Needs RQ4's real result first |
 
-## License
-Code in this repository is released under the MIT License. Data usage follows each
-original source's own public-data terms (Apache Software Foundation, NASA/PROMISE,
-PCAOB, and U.S. SEC EDGAR).
+The NASA/PROMISE dataset (notebooks 04-06) was the original interim-stage substitute
+for RQ1 before the real code-metric mining pipeline (notebook 07) was built; it now
+serves as a cross-validation reference rather than RQ1's primary evidence.
+
+**Known labeling caveat (RQ1):** `defect_prone = 1` in the mined dataset means
+"commit linked to a tracked, resolved JIRA issue," not a strict "confirmed bug"
+label, since the JIRA extraction did not capture the issue-type field. See the
+report's Limitations section for full detail.
+
+## Reproducing the Analysis
+
+```bash
+pip install -r requirements.txt
+jupyter notebook
+# Run in order: 01 -> 02 (PCAOB half only; SEC EDGAR half is commented out) -> 03 ->
+# 04 -> 05 -> 06 -> 07 -> 08 -> 09
+# Notebook 07 will clone the real apache/camel and apache/hadoop repos on first run
+# (large, full commit history) if they aren't already present under ../repos/.
+```
+
+## Key Real Results (Summary)
+
+| Domain | Model | Test AUC | Test Accuracy |
+|---|---|---|---|
+| RQ1 (code-metric mining) | Random Forest | 0.730 | 0.734 |
+| RQ2 (JIRA era regression) | OLS (era interactions) | -- | Cohen's f-squared = 0.0011 (negligible) |
+| RQ3 (PCAOB severity) | Random Forest | 0.986 | 0.971 |
+| NASA/PROMISE baseline | Random Forest | 0.731 | 0.752 |
+
+McNemar's test (NASA/PROMISE LogReg vs. RF): chi-square = 26.28, p < .0001.

@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+scipy
+statsmodels
+liac-arff
+lizard
+lifelines
+jupyter
+notebook
+requests

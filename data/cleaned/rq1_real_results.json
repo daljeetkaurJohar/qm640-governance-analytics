@@ -1,0 +1,23 @@
+{
+  "n_total": 1804,
+  "n_defect_prone": 1179,
+  "n_not_defect_prone": 625,
+  "significant_era_interactions": [
+    "loc:era_binary",
+    "num_functions:era_binary"
+  ],
+  "mcfadden_r2_full": 0.018042458174053255,
+  "mcfadden_r2_reduced": 0.0030085705180243894,
+  "logreg_accuracy": 0.5484764542936288,
+  "logreg_auc": 0.579457627118644,
+  "rf_accuracy": 0.7340720221606648,
+  "rf_auc": 0.7302372881355933,
+  "majority_baseline_acc": 0.6537396121883656,
+  "feature_importances": {
+    "loc": 0.31178994715546215,
+    "cyclomatic_complexity": 0.28865576784655106,
+    "num_functions": 0.2501163375171176,
+    "num_files_changed": 0.11296293979571054,
+    "era_binary": 0.036475007685158524
+  }
+}

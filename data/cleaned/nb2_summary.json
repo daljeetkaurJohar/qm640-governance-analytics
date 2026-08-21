@@ -1,0 +1,11 @@
+{
+  "n_raw": 12655,
+  "n_dupes_removed": 16,
+  "n_final": 12639,
+  "overall_defect_rate": 0.1875148350344173,
+  "train_size": 10111,
+  "test_size": 2528,
+  "logreg_auc": 0.7188207428954105,
+  "rf_auc": 0.7312807365683507,
+  "majority_baseline_acc": 0.8125
+}
