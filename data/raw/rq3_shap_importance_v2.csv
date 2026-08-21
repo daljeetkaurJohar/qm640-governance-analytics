@@ -1,0 +1,104 @@
+feature,mean_abs_shap,real_original_feature
+Auditing Standard_AS 2201,0.07776641500946761,Auditing Standard
+Auditing Standard_AS 2301,0.07088645507305298,Auditing Standard
+Auditing Standard_AS 1301,0.047995954598420196,Auditing Standard
+Auditing Standard_AS 3101,0.04227751418628586,Auditing Standard
+Inspection Type_Triennially Inspected,0.03736552104174155,Inspection Type
+Inspection Type_Annually Inspected,0.03499830528706863,Inspection Type
+Auditing Standard_AS 1105,0.0322410432561677,Auditing Standard
+Auditing Standard_PCAOB Rule 3211,0.021854419445504192,Auditing Standard
+Auditing Standard_AS 2315,0.020101457950670393,Auditing Standard
+Auditing Standard_AS 2501,0.017816198948232786,Auditing Standard
+Auditing Standard_AS 2810,0.015692118653510945,Auditing Standard
+Auditing Standard_AS 1215,0.008055156149130655,Auditing Standard
+Auditing Standard_AS 2110,0.007034284336283572,Auditing Standard
+Inspection Year_2019.0,0.006475240980414353,Inspection Year
+Inspection Year_2024.0,0.004395581354083858,Inspection Year
+Inspection Year_2018.0,0.003995034629959653,Inspection Year
+Auditing Standard_AS 2805,0.0036980050228891783,Auditing Standard
+Inspection Year_2025.0,0.0036462891237028046,Inspection Year
+Auditing Standard_AS 2502,0.003408994295365074,Auditing Standard
+Country_United States,0.003074056476255868,Country
+Auditing Standard_AS 1220,0.0024743724637361496,Auditing Standard
+Auditing Standard_AS 1305,0.0019930026106766635,Auditing Standard
+Auditing Standard_AS 2401,0.0019704657253265334,Auditing Standard
+Auditing Standard_PCAOB Rule 3526,0.0018070386987887408,Auditing Standard
+Auditing Standard_AS 1201,0.0016238913969951047,Auditing Standard
+Auditing Standard_AS 2305,0.001406500009530044,Auditing Standard
+Auditing Standard_AS 2310,0.001402664836223543,Auditing Standard
+Inspection Year_2021.0,0.0010101484433680356,Inspection Year
+Inspection Year_2020.0,0.0009843230108208048,Inspection Year
+Inspection Year_2022.0,0.0009758160889015868,Inspection Year
+Auditing Standard_PCAOB Rule 3524,0.0009230447788077785,Auditing Standard
+Inspection Year_2023.0,0.0008983011463968865,Inspection Year
+Auditing Standard_AS 1210,0.0007300861015166544,Auditing Standard
+Auditing Standard_AS 3105,0.0006872436512675256,Auditing Standard
+Country_Canada,0.0004439716379291246,Country
+Country_China,0.0004287033363505949,Country
+Auditing Standard_AS 2101,0.00041019599297993105,Auditing Standard
+Country_Brazil,0.0003944504313255822,Country
+Country_Singapore,0.00033668891239942915,Country
+Country_Israel,0.0002522159296055048,Country
+Auditing Standard_AS 2510,0.0002399353158309705,Auditing Standard
+Country_Hong Kong,0.00022443789652283055,Country
+Auditing Standard_AS 1205,0.00017029927486479773,Auditing Standard
+Country_India,0.00014690710553291256,Country
+Country_South Africa,0.00013468820291687362,Country
+Auditing Standard_AS 2601,0.0001233522078762959,Auditing Standard
+Auditing Standard_AS 1015,0.00011578316175081058,Auditing Standard
+Auditing Standard_PCAOB Rule 2200,0.000115258457191549,Auditing Standard
+Auditing Standard_AS 2410,8.976758325932244e-05,Auditing Standard
+Country_Denmark,7.277460944299296e-05,Country
+Country_Malaysia,7.167933544540007e-05,Country
+Country_Nigeria,6.26320083442821e-05,Country
+Country_Mexico,5.8971450411506745e-05,Country
+Country_Ireland,5.251701990362855e-05,Country
+Auditing Standard_AS 2415,5.2019836205908375e-05,Auditing Standard
+Country_Australia,4.8441148366935646e-05,Country
+Country_Indonesia,4.643741869471943e-05,Country
+Auditing Standard_AS 2605,4.189532845958531e-05,Auditing Standard
+Country_Chile,3.9585380184206844e-05,Country
+Country_France,3.2853702376725295e-05,Country
+Country_Vietnam,3.1407404245125024e-05,Country
+Auditing Standard_PCAOB Rule 2100,2.9038799098781712e-05,Auditing Standard
+Auditing Standard_AS 1101,2.7332757181937205e-05,Auditing Standard
+Auditing Standard_PCAOB Rule 3520,2.6745534429510333e-05,Auditing Standard
+Country_Sweden,2.3268812866599438e-05,Country
+Country_Germany,2.267064448442617e-05,Country
+Auditing Standard_AS 2710,2.10556915701157e-05,Auditing Standard
+Country_Taiwan,1.9081403962769227e-05,Country
+Auditing Standard_AS 2610,1.8823895900582615e-05,Auditing Standard
+Country_Japan,1.87241707867689e-05,Country
+Country_Philippines,1.5270963554426485e-05,Country
+Country_United Kingdom,1.5154670157237469e-05,Country
+Auditing Standard_AS 4105,1.4851604401895324e-05,Auditing Standard
+Country_Norway,1.4040521611685083e-05,Country
+Country_Bermuda,1.0822742167047913e-05,Country
+Country_Colombia,9.237123739621907e-06,Country
+Country_Peru,9.098651894348686e-06,Country
+Country_Pakistan,8.999664382101753e-06,Country
+Country_Belgium,6.488747170894635e-06,Country
+Auditing Standard_AS 2405,5.740949066778854e-06,Auditing Standard
+Country_Switzerland,5.347100345304897e-06,Country
+Country_Panama,4.943168355002947e-06,Country
+Country_South Korea,3.783896164580293e-06,Country
+Country_Italy,2.64744746368397e-06,Country
+Country_Greece,2.385657739225719e-06,Country
+Auditing Standard_AS 2503,2.106865835842185e-06,Auditing Standard
+Country_Luxembourg,2.0286858274182434e-06,Country
+Country_Netherlands,1.7586623017751166e-06,Country
+Auditing Standard_AS 2105,1.6689212220781446e-06,Auditing Standard
+Auditing Standard_AS 3305,1.2339208125728847e-06,Auditing Standard
+Country_United Arab Emirates,5.150068955753088e-07,Country
+Auditing Standard_AS 2505,3.5513925667956155e-07,Auditing Standard
+Country_Finland,2.2766386908359534e-07,Country
+Auditing Standard_AS 2820,2.2260155241280933e-07,Auditing Standard
+Country_Argentina,1.9962949490281625e-07,Country
+Auditing Standard_Other Non-PCAOB Standards,7.30552860624561e-08,Auditing Standard
+Country_Spain,6.158678971582022e-08,Country
+Country_Ghana,2.3058356846441488e-08,Country
+Auditing Standard_AS 2801,0.0,Auditing Standard
+Auditing Standard_AS 2905,0.0,Auditing Standard
+Auditing Standard_PCAOB Rule 3525,0.0,Auditing Standard
+Country_Cayman Islands,0.0,Country
+Country_Thailand,0.0,Country
