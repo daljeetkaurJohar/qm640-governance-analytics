@@ -1,0 +1,14 @@
+{
+  "n_total": 113,
+  "n_remediated": 61,
+  "n_censored": 52,
+  "ols_n": 61,
+  "ols_r_squared": 0.20015495914630588,
+  "ols_adjusted_r_squared": 0.020597909158741823,
+  "ols_f_pvalue": 0.3704873716227998,
+  "cox_concordance_with_year_unstratified": 0.6199230440359128,
+  "cox_concordance_stratified_by_year": 0.6138211382113821,
+  "cox_concordance_without_year": 0.6059213339033775,
+  "cox_significant_terms_unstratified": {},
+  "cox_significant_terms_stratified": {}
+}

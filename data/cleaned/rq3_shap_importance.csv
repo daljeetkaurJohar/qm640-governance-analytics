@@ -1,0 +1,100 @@
+feature,mean_abs_shap,real_original_feature
+Auditing Standard_AS 2201,0.10102374613316602,Auditing Standard
+Auditing Standard_AS 2301,0.06467723379032297,Auditing Standard
+Auditing Standard_AS 1301,0.03646619513851465,Auditing Standard
+Auditing Standard_AS 1105,0.03644811584751411,Auditing Standard
+Auditing Standard_AS 2315,0.03507944459791073,Auditing Standard
+Auditing Standard_AS 3101,0.029748601317683147,Auditing Standard
+Inspection Type_Triennially Inspected,0.02066302474018232,Inspection Type
+Country_United States,0.017157701984819064,Country
+Inspection Type_Annually Inspected,0.01579198375447166,Inspection Type
+Auditing Standard_PCAOB Rule 3211,0.014569442421020106,Auditing Standard
+Auditing Standard_AS 1215,0.01315196529692011,Auditing Standard
+Inspection Year_2024.0,0.011070401079769992,Inspection Year
+Auditing Standard_AS 2110,0.01095999157592133,Auditing Standard
+Auditing Standard_AS 2501,0.009017261511389816,Auditing Standard
+Inspection Year_2018.0,0.007870618444010408,Inspection Year
+Inspection Year_2025.0,0.007768877006639019,Inspection Year
+Inspection Year_2019.0,0.007710047065282599,Inspection Year
+Global Network_Deloitte Touche Tohmatsu Limited,0.006312291937615569,Global Network
+Auditing Standard_PCAOB Rule 3524,0.004222146785236215,Auditing Standard
+Inspection Year_2022.0,0.003810679303644559,Inspection Year
+Global Network_Grant Thornton International Limited,0.003353687392631791,Global Network
+Global Network_KPMG International Cooperative,0.0029225793571818516,Global Network
+Auditing Standard_AS 2810,0.0029133727171311466,Auditing Standard
+Global Network_Ernst & Young Global Limited,0.0029085375597047314,Global Network
+Auditing Standard_AS 2401,0.0028765442123980987,Auditing Standard
+Auditing Standard_AS 2101,0.0023821293460503743,Auditing Standard
+Auditing Standard_AS 2502,0.0019479344353709733,Auditing Standard
+Auditing Standard_AS 2305,0.0019084848414135456,Auditing Standard
+Auditing Standard_AS 2805,0.001901466788167886,Auditing Standard
+Global Network_BDO International Limited,0.0018353304019083244,Global Network
+Inspection Year_2020.0,0.001745159913801469,Inspection Year
+Country_China,0.0017335417814864525,Country
+Global Network_PricewaterhouseCoopers International Limited,0.001652058569022273,Global Network
+Inspection Year_2023.0,0.0013499122750947814,Inspection Year
+Auditing Standard_PCAOB Rule 3526,0.001170679495609872,Auditing Standard
+Country_South Africa,0.0007068197334915922,Country
+Country_Hong Kong,0.0006975888992036772,Country
+Auditing Standard_PCAOB Rule 2200,0.0006756420088456382,Auditing Standard
+Auditing Standard_AS 1205,0.0006140520123960382,Auditing Standard
+Auditing Standard_AS 1015,0.00048807851340358193,Auditing Standard
+Inspection Year_2021.0,0.0004556842608600764,Inspection Year
+Auditing Standard_AS 1201,0.0004555394449387855,Auditing Standard
+Country_Brazil,0.00038383095905105595,Country
+Country_Israel,0.00037940856054902806,Country
+Auditing Standard_AS 1305,0.00036605026818028373,Auditing Standard
+Auditing Standard_AS 3105,0.0003622549923608615,Auditing Standard
+Country_Vietnam,0.0003465122423215881,Country
+Auditing Standard_AS 2310,0.0003248464488176828,Auditing Standard
+Auditing Standard_AS 2510,0.00031104128750513994,Auditing Standard
+Country_Canada,0.00029825413320668507,Country
+Country_India,0.00026173152910537195,Country
+Country_Mexico,0.0002458308669091926,Country
+Country_Ireland,0.00023630432133474853,Country
+Country_Thailand,0.00019420323978159353,Country
+Country_Singapore,0.0001660862189620171,Country
+Country_Germany,0.00014765080866301815,Country
+Country_Colombia,0.0001396328614644435,Country
+Country_Belgium,0.00013795274356911348,Country
+Country_Denmark,0.00013103135895832453,Country
+Auditing Standard_AS 4105,0.00012249245398665811,Auditing Standard
+Country_Switzerland,0.00010997312344538357,Country
+Country_Sweden,0.00010712054727473157,Country
+Country_United Kingdom,9.09506746847758e-05,Country
+Country_Peru,8.288716034811793e-05,Country
+Country_Australia,6.916330200778376e-05,Country
+Auditing Standard_AS 2415,6.876828922659079e-05,Auditing Standard
+Country_Philippines,5.5152220510717464e-05,Country
+Country_France,5.4141181643831834e-05,Country
+Country_Netherlands,4.8606112948704766e-05,Country
+Country_Spain,4.3071984656514814e-05,Country
+Auditing Standard_AS 1220,4.128830572341138e-05,Auditing Standard
+Auditing Standard_AS 2820,3.7761398754023514e-05,Auditing Standard
+Country_South Korea,3.1767331272015105e-05,Country
+Country_Panama,3.075587132155524e-05,Country
+Country_Chile,2.9543200562874426e-05,Country
+Country_Taiwan,2.9396641098942215e-05,Country
+Country_Greece,2.654955053541888e-05,Country
+Country_Luxembourg,2.4907510724116333e-05,Country
+Country_Argentina,2.267379118352304e-05,Country
+Country_Norway,2.188624259585898e-05,Country
+Country_Japan,1.9066043154522497e-05,Country
+Country_Bermuda,1.8456033180058728e-05,Country
+Auditing Standard_AS 1210,1.7675925532987764e-05,Auditing Standard
+Auditing Standard_AS 2410,1.6719128882485193e-05,Auditing Standard
+Auditing Standard_PCAOB Rule 3525,1.4109523763276316e-05,Auditing Standard
+Country_Italy,1.2260363663050243e-05,Country
+Auditing Standard_AS 2601,9.786893943828368e-06,Auditing Standard
+Auditing Standard_AS 2605,8.675398834145706e-06,Auditing Standard
+Auditing Standard_AS 2710,8.634570212403517e-06,Auditing Standard
+Country_Finland,8.29837913454646e-06,Country
+Country_Indonesia,4.014468019302976e-06,Country
+Auditing Standard_AS 2405,1.811003048418477e-06,Auditing Standard
+Auditing Standard_AS 2503,1.2516291605802037e-06,Auditing Standard
+Country_Ghana,6.849441018195855e-07,Country
+Auditing Standard_AS 2505,0.0,Auditing Standard
+Auditing Standard_PCAOB Rule 2100,0.0,Auditing Standard
+Country_Cayman Islands,0.0,Country
+Auditing Standard_PCAOB Rule 3520,0.0,Auditing Standard
+Country_United Arab Emirates,0.0,Country

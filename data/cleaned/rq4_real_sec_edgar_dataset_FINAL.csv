@@ -1,0 +1,114 @@
+company,disclosure_date,remediation_date,weakness_category,industry,source_form,event_observed,remediation_days
+Table Trac Inc,2020-12-31,2021-06-30,Revenue Recognition,Technology,10-K/10-Q,1,181
+Tredegar Corp,2018-01-01,,Control Environment,Manufacturing,10-Q,0,3145
+Sundial Growers Inc,2021-12-31,,ITGC/Multiple,Consumer/Cannabis,20-F,0,1685
+Stonemor Inc,2019-12-31,,Revenue Recognition,Real Estate/Services,10-K,0,2416
+Gaming and Hospitality Acquisition Corp,2022-03-31,2022-06-30,Complex Financial Instruments,SPAC,10-Q,1,91
+Codexis Inc,2022-03-31,,Revenue Recognition,Biotech,10-Q,0,1595
+UpHealth Inc,2021-12-31,,ITGC/ERP,Healthcare,10-Q,0,1685
+Fluence Energy Inc,2021-09-30,,Revenue Recognition,Energy,10-Q,0,1777
+Clever Leaves Holdings Inc,2022-01-01,,Control Environment,Consumer/Cannabis,10-Q,0,1684
+CorEnergy Infrastructure Trust Inc,2022-12-31,2023-12-31,Complex Transactions,Energy/REIT,10-K,1,365
+CEA Industries Inc,2020-12-31,,Multiple/Unspecified,Industrial,10-K,0,2050
+Ginkgo Bioworks Holdings Inc,2022-12-31,,ITGC,Biotech,10-K,0,1320
+Adverum Biotechnologies Inc,2023-06-30,2023-12-31,Complex Transactions,Biotech,10-K,1,184
+BigBear.ai Holdings Inc,2022-12-31,2023-12-31,Segregation of Duties/Revenue/ITGC,Technology,10-K,1,365
+Energy Vault Holdings Inc,2022-12-31,2023-12-31,Revenue Recognition,Energy,10-K,1,365
+AEON Biopharma Inc,2023-01-01,,Control Environment,Biotech,10-K,0,1319
+Gannett Co Inc,2020-12-31,2021-12-31,Revenue Recognition,Media,10-K,1,365
+Cantaloupe Inc,2020-06-30,2021-06-30,Complex Transactions,Technology,10-K,1,365
+AZZ Inc,2020-02-29,2021-02-28,Income Tax,Manufacturing,10-K,1,365
+Acumen Pharmaceuticals Inc,2021-09-30,2021-12-31,Segregation of Duties,Biotech,10-K,1,92
+Olaplex Holdings Inc,2021-01-01,2021-12-31,Entity-Level/ITGC,Consumer,10-K,1,364
+Hartman Short Term Income Properties XX Inc,2021-06-30,2021-12-31,Account Reconciliation,Real Estate,10-K,1,184
+InMed Pharmaceuticals Inc,2020-06-30,,Control Environment,Biotech,10-K,0,2234
+BRP Group Inc,2021-01-01,,Multiple,Insurance,10-K,0,2049
+Spirit Airlines Inc,2019-12-31,2020-09-30,Review Controls/Cash Flow Statement,Transportation,10-K,1,274
+FuelCell Energy Inc,2020-01-01,,Complex Transactions/Instruments,Energy,8-K,0,2415
+GTT Communications Inc,2020-12-16,,Unspecified/Errors,Telecom,8-K,0,2065
+CPI Aerostructures Inc,2020-02-14,,Revenue Recognition/ITGC,Aerospace,10-K,0,2371
+Eagle Bancorp Inc,2019-12-31,2020-08-10,Related Party Transactions,Financial Services,8-K/10-Q,1,223
+CIM Opportunity Zone Fund LP,2023-12-31,2024-12-31,Risk Assessment,Real Estate Fund,10-K,1,366
+Pacific Oak Strategic Opportunity REIT Inc,2024-01-01,2024-12-31,Unspecified,Real Estate,10-K,1,365
+Twist Bioscience Corp,2023-09-30,2024-09-30,ITGC,Biotech,10-K,1,366
+Vivos Therapeutics Inc,2023-01-01,2024-12-31,Control Deficiencies,Healthcare,10-K,1,730
+Trupanion Inc,2023-12-31,2024-12-31,ITGC/Third-Party Processing,Insurance,10-K,1,366
+NextPlat Corp,2024-12-31,,Unspecified,Healthcare/Technology,10-K,0,589
+ProPhase Labs Inc (2022 episode),2021-12-31,2022-12-31,Billing/Estimates,Healthcare,10-K,1,365
+ProPhase Labs Inc (2024 episode),2023-12-31,,Financial Close Process,Healthcare,10-K,0,955
+Synlogic Inc,2023-12-31,,Non-Routine Transactions,Biotech,10-K,0,955
+Fastly Inc,2020-12-31,,Multiple (Staffing/Software/Stock Admin),Technology,10-K,0,2050
+Digital Media Solutions Inc (2021 episode),2021-12-31,2022-12-31,Accounts Receivable,Media/Marketing,10-K,1,365
+Sonida Senior Living Inc,2020-12-31,,Staffing/Accounting Resources,Healthcare/Real Estate,10-K,0,2050
+CIRCOR International Inc,2019-12-31,2020-12-31,Unspecified,Manufacturing,10-K,1,366
+Sientra Inc,2019-12-31,2020-12-31,Goodwill/Impairment,Healthcare,10-K,1,366
+Weatherford International plc,2020-06-30,2020-12-31,Asset Impairment Review,Energy,10-K,1,184
+QVC Inc,2019-12-31,2020-12-31,ITGC,Retail,10-K,1,366
+Establishment Labs Holdings Inc,2019-12-31,,Unspecified/ERP,Healthcare,10-K,0,2416
+Pieris Pharmaceuticals Inc,2019-12-31,2020-12-31,ITGC/Revenue Recognition,Biotech,10-K,1,366
+Sprout Social Inc,2018-12-31,2020-12-31,Control Environment/Staffing,Technology,10-K,1,731
+AZEK Co Inc,2020-02-07,,ITGC,Manufacturing,10-K,0,2378
+Guidewire Software Inc,2019-01-01,2019-07-31,Revenue Recognition,Technology,10-K,1,211
+Coronado Global Resources Inc,2018-12-31,,Complex Transactions,Mining,10-K,0,2781
+Manitex International Inc,2018-12-31,2019-12-31,Contract Intake/Multiple,Manufacturing,10-K,1,365
+InnerWorkings Inc,2017-12-31,2019-12-31,Revenue Recognition/Commission Expense,Marketing Services,10-K,1,730
+Meredith Corp,2019-06-30,2019-06-30,Revenue Recognition,Media,10-K,1,0
+CRA International Inc,2018-12-29,,Incentive Compensation/Revenue,Consulting,10-K,0,2783
+Welbilt Inc,2019-01-01,2019-12-31,Risk Assessment,Manufacturing,10-K,1,364
+Qwest Corp,2018-12-31,2019-12-31,Revenue Recognition,Telecom,10-K,1,365
+Bill.com Holdings Inc,2021-06-30,2022-06-30,Business Combination Accounting,Technology,10-K,1,365
+RCI Hospitality Holdings Inc,2021-09-30,2022-09-30,Goodwill Impairment,Consumer/Hospitality,10-K,1,365
+Life360 Inc,2022-12-31,,ITGC,Technology,10-K,0,1320
+AdaptHealth Corp,2021-12-31,,Entity-Wide Risk Assessment,Healthcare,10-K,0,1685
+Telos Corp,2021-12-31,2022-12-31,Control Environment/ITGC,Technology/Defense,10-K,1,365
+Rigetti Computing Inc,2022-03-31,,Complex Instruments (Earn-out/Warrants),Technology,10-K,0,1595
+Amerant Bancorp Inc,2022-12-31,,Unspecified,Financial Services,10-K,0,1320
+Emagin Corp,2022-09-30,2022-12-31,Complex/Non-Routine Transactions,Technology,10-K,1,92
+Superior Group of Companies Inc,2023-01-01,,Unspecified,Manufacturing/Apparel,10-K,0,1319
+Celsius Holdings Inc,2022-12-31,2023-12-31,ITGC/COSO Framework,Consumer,10-K,1,365
+Ascent Industries Co,2022-12-31,2023-12-31,Entity-Level/Complex Accounting,Manufacturing/Chemicals,10-K,1,365
+MKS Instruments Inc,2022-12-31,2023-12-31,ITGC/Cybersecurity,Technology,10-K,1,365
+Evo Acquisition Corp,2021-03-31,2021-12-31,Complex Financial Instruments (Warrants),SPAC,10-K/A,1,275
+Quotient Ltd,2021-03-31,,Debt Arrangements Accounting,Consumer,10-K/A,0,1960
+Madison Square Garden Entertainment Corp,2021-06-30,,Capitalized Interest,Media/Entertainment,10-K/A,0,1869
+CareMax Inc,2021-12-31,,Earnout Shares Classification,Healthcare,10-K/A,0,1685
+VectoIQ Acquisition Corp II,2021-04-12,,Warrant Classification,SPAC,10-K/A,0,1948
+Tuatara Capital Acquisition Corp,2021-03-31,,Complex Financial Instruments (Warrants),SPAC,10-K/A,0,1960
+Sterling Real Estate Trust,2024-01-01,,Purchase Price Allocation Review,Real Estate,10-K,0,954
+Santander Consumer USA Holdings Inc.,2019-02-26,2018-12-31,Other,Financial/Real Estate,10-K,1,0
+Altair Engineering Inc.  (ALTR),2019-03-01,2018-12-31,Other,Technology,10-K,1,0
+FITBIT INC,2019-03-01,,Other,Technology,10-K,0,2721
+"Fluent, Inc.  (FLNT)",2019-03-18,,Other,Technology,10-K,0,2704
+"Hunt Companies Finance Trust, Inc.  (LFT, LFT-PA)",2019-03-18,,Other,Financial/Real Estate,10-K,0,2704
+"EMMAUS LIFE SCIENCES, INC.",2019-03-21,,Other,Biotech/Healthcare,10-K,0,2701
+Osmotica Pharmaceuticals plc  (RVLPQ),2019-04-11,,Other,Biotech/Healthcare,8-K,1,2680
+CTI INDUSTRIES CORP  (YHGJ),2019-04-22,2018-12-31,Other,Manufacturing/Industrial,8-K,1,0
+NATURAL HEALTH TRENDS CORP  (NHTC),2019-04-26,2018-12-31,Other,Media/Consumer/Other,10-K,1,0
+"Guidewire Software, Inc.  (GWRE)",2019-05-01,,Revenue Recognition,Technology,8-K,0,2660
+ENTRAVISION COMMUNICATIONS CORP  (EVC),2019-05-07,2018-12-31,Goodwill/Impairment,Media/Consumer/Other,10-K,1,0
+"pdvWireless, Inc.  (ATEX)",2019-05-20,2019-03-31,Control Environment/Staffing,Technology,10-K,1,0
+"Vishay Precision Group, Inc.  (VPG)",2019-05-31,2018-12-31,Other,Manufacturing/Industrial,8-K,1,0
+"Pluralsight, Inc.",2019-08-02,,Other,Technology,8-K,0,2567
+INTREXON CORP  (PGEN),2019-09-16,,Other,Biotech/Healthcare,8-K,1,2522
+"PRECISION OPTICS CORPORATION, INC.  (POCI)",2019-09-26,,Control Environment/Staffing,Manufacturing/Industrial,10-K,0,2512
+LINDSAY CORP  (LNN),2019-10-31,2019-08-31,Other,Manufacturing/Industrial,10-K,1,0
+META FINANCIAL GROUP INC  (CASH),2019-11-26,,Control Environment/Staffing,Financial/Real Estate,10-K,0,2452
+IMPINJ INC  (PI),2019-02-28,2018-12-31,Other,Technology,10-K,1,0
+"BIO-RAD LABORATORIES, INC.  (BIO, BIO-B)",2019-04-01,2018-12-31,Control Environment/Staffing,Biotech/Healthcare,10-K,1,0
+"EXICURE, INC.  (XCUR)",2019-09-23,,Other,Biotech/Healthcare,10-K/A,0,2516
+CURO Group Holdings Corp.,2019-08-06,,Income Tax,Financial/Real Estate,10-K,0,2564
+MARRIOTT INTERNATIONAL INC /MD/  (MAR),2019-03-01,2019-12-31,Control Environment/Staffing,Media/Consumer/Other,10-Q,1,305
+"EXP World Holdings, Inc.  (EXPI)",2019-03-18,2019-12-31,Unspecified,Financial/Real Estate,10-K,1,288
+GRAPHIC PACKAGING HOLDING CO  (GPK),2019-02-13,2019-03-31,Other,Manufacturing/Industrial,10-Q,1,46
+Lonestar Resources US Inc.,2019-03-13,2019-06-30,Other,Energy,10-Q,1,109
+"ENPRO INDUSTRIES, INC  (NPO)",2019-08-02,,Income Tax,Manufacturing/Industrial,10-Q,0,2568
+TRANSACT TECHNOLOGIES INC  (TACT),2019-11-21,2019-12-31,Unspecified,Technology,10-K,1,40
+"Advanced Disposal Services, Inc.",2019-02-26,2019-03-31,Other,Manufacturing/Industrial,10-Q,1,33
+Liberty Latin America Ltd.,2020-12-31,,Unspecified,Media/Consumer/Other,10-K,0,2051
+"F-star Therapeutics, Inc.",2019-12-31,,Control Environment/Staffing,Biotech/Healthcare,10-K,0,2417
+"Shift Technologies, Inc.",2020-12-31,,Unspecified,Technology,10-K,0,2051
+"Enjoy Technology, Inc.",2021-01-01,,Control Environment/Staffing,Technology,10-K,0,2050
+"IO Biotech, Inc.",2021-12-31,,Unspecified,Biotech/Healthcare,10-K,0,1686
+Centessa Pharmaceuticals plc,2021-06-02,2021-12-31,Control Environment/Staffing,Biotech/Healthcare,10-K,1,212
+GCP Applied Technologies Inc.,2020-12-31,2021-12-31,ITGC,Manufacturing/Industrial,10-K,1,365
+"Bolt Biotherapeutics, Inc.",2021-01-01,,Control Environment/Staffing,Biotech/Healthcare,10-K,0,2050
