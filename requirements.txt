@@ -1,12 +1,38 @@
-pandas
-numpy
-scikit-learn
-matplotlib
-scipy
-statsmodels
-liac-arff
-lizard
-lifelines
-jupyter
-notebook
-requests
+# QM640 Governance Analytics — Python dependencies
+#
+# Versions below marked "(verified)" were confirmed working in the environment
+# used to check this project's reported numbers. Versions marked "(unverified)"
+# were not directly tested here but are recent, compatible releases -- pin them
+# more precisely yourself if you hit a compatibility issue.
+#
+# Install with: pip install -r requirements.txt
+
+# --- Core data handling (verified) ---
+pandas==2.3.3
+numpy==2.4.4
+
+# --- Modeling / stats (verified) ---
+scikit-learn==1.8.0
+statsmodels==0.15.0
+lifelines==0.30.3
+scipy==1.17.1
+patsy==1.0.2          # used directly in RQ1's VIF diagnostics; also a statsmodels dependency
+
+# --- Explainability (unverified -- used in RQ3_3_SHAP.ipynb / RQ3_3_SHAP_v2.ipynb) ---
+shap>=0.45.0
+
+# --- Code-metric mining (RQ1) ---
+lizard>=1.17.10
+
+# --- NASA/PROMISE ARFF loading (unverified) ---
+liac-arff>=2.5.0
+
+# --- Plotting (verified) ---
+matplotlib==3.10.8
+
+# --- HTTP (JIRA/PCAOB extraction; verified) ---
+requests==2.33.1
+
+# --- Notebook environment (unverified -- pin to your platform's supported version if needed) ---
+jupyter>=1.0.0
+notebook>=7.0.0
